@@ -130,4 +130,9 @@ return redirect('/blog')->with('message', 'Your post has been created!');
 
         return redirect('/blog')->with('message', 'Your post have been deleted!');
     }
+
+    public function countpost(){
+        $post = Post::count();
+        return view('index', compact('post'));
+    }
 }
